@@ -24,7 +24,22 @@ class MaximumSubarray:
 
         return max_sum
 
+    def Kadane(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
+
+        cur_max = nums[0]
+        global_max = 0
+
+        for i in range(1, len(nums)):
+            cur_max += nums[i]
+            if cur_max < 0:
+                cur_max = 0
+            global_max = max(global_max, cur_max)
+
+        return global_max
 
 obj = MaximumSubarray()
 nums = [5, 4, -1, 7, 8]
 print(MaximumSubarray.maxSubArray(obj, nums))
+print(MaximumSubarray.Kadane(obj, nums))
