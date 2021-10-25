@@ -1,3 +1,12 @@
+'''
+https://leetcode.com/problems/decode-ways/
+A message containing letters from A-Z can be encoded into numbers using the following mapping:
+'A' -> "1"
+'B' -> "2"
+...
+'Z' -> "26"
+Given a string s containing only digits, return the number of ways to decode it.
+'''
 class DecodeWays:
     def numDecodings(self, s: str) -> int:
         res = [0 for i in range(len(s))]
