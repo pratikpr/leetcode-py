@@ -1,5 +1,8 @@
 from typing import Optional
-
+'''
+https://leetcode.com/problems/sum-of-left-leaves/
+Given the root of a binary tree, return the sum of all left leaves
+'''
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
