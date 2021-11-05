@@ -16,7 +16,24 @@ class SubarraySumK:
 
         return count
 
+    def subArraySumMap(self, nums, k):
+        count, sum = 0,0
+        sum_map = {}
+        sum_map[0] = 1
+
+        for i in range(len(nums)):
+            sum += nums[i]
+            if sum-k in sum_map:
+                count += sum_map[sum-k]
+            if sum in sum_map:
+                sum_map[sum] += 1
+            else:
+                sum_map[sum] = 1
+
+        return count
+
 obj = SubarraySumK()
 nums = [1,2,3]
-k = 3
+k = 4
 print(obj.subarraySum(nums, k))
+print(obj.subArraySumMap(nums, k))
