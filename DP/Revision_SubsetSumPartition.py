@@ -25,6 +25,7 @@ class Revise_Partition:
 					
 		return dp[n-1][sum_nums]
 	
+	
 obj = Revise_Partition()
 nums = [1,1,1,5]
 print(obj.can_partition(nums))
